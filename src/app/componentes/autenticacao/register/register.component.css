@@ -7,6 +7,8 @@ html, body {
   align-items: center;
 }
 
+/* background-image: url('https://blog.imedicina.com.br/wp-content/uploads/2020/07/shutterstock_314744660-1.jpg');*/
+
 body {
   width: 100%;
   height: 100%;
@@ -106,6 +108,15 @@ body {
 .ng-invalid.ng-touched .form-control:focus {
   box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
 }
+
+
+
+
+
+
+
+
+
 
 
 

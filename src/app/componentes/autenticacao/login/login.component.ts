@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NgForm, FormsModule } from '@angular/forms';  // Importar FormsModule
-import { CommonModule } from '@angular/common';  // Importar CommonModule
+import { NgForm, FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';  // Importar RouterModule
 import { AutenticacaoService } from '../../../services/autenticacao.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { AutenticacaoService } from '../../../services/autenticacao.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
   standalone: true,
-  imports: [CommonModule, FormsModule]  // Incluir CommonModule e FormsModule
+  imports: [CommonModule, FormsModule, RouterModule]  // Incluir RouterModule
 })
 export class LoginComponent {
   constructor(private authService: AutenticacaoService) {}
@@ -28,6 +29,8 @@ export class LoginComponent {
     }
   }
 }
+
+
 
 
 

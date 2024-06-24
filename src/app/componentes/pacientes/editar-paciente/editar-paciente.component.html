@@ -1,0 +1,51 @@
+<div class="editar-paciente-container">
+  <h2>Editar Paciente</h2>
+  <form #editForm="ngForm" (ngSubmit)="onSubmit(editForm)">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" [(ngModel)]="paciente.nome" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" name="telefone" [(ngModel)]="paciente.telefone" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="paciente.email" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="logradouro">Logradouro:</label>
+      <input type="text" id="logradouro" name="endereco.logradouro" [(ngModel)]="paciente.endereco.logradouro" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="bairro">Bairro:</label>
+      <input type="text" id="bairro" name="endereco.bairro" [(ngModel)]="paciente.endereco.bairro" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" name="endereco.cep" [(ngModel)]="paciente.endereco.cep" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="endereco.cidade" [(ngModel)]="paciente.endereco.cidade" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="uf">UF:</label>
+      <input type="text" id="uf" name="endereco.uf" [(ngModel)]="paciente.endereco.uf" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="complemento">Complemento:</label>
+      <input type="text" id="complemento" name="endereco.complemento" [(ngModel)]="paciente.endereco.complemento" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="numero">Número:</label>
+      <input type="text" id="numero" name="endereco.numero" [(ngModel)]="paciente.endereco.numero" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="editForm.invalid">Salvar</button>
+    <button type="button" class="btn btn-secondary" (click)="voltar()">Voltar</button>
+  </form>
+</div>
+
+  
+  
+  

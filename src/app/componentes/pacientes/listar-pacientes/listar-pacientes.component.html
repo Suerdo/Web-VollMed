@@ -1,0 +1,32 @@
+<!-- listar-pacientes.component.html -->
+<div class="container">
+  <h2>Lista de Pacientes</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let paciente of pacientes">
+        <td>{{ paciente.nome }}</td>
+        <td>{{ paciente.email }}</td>
+        <td>{{ paciente.telefone }}</td>
+        <td>
+          <a [routerLink]="['/pacientes/editar', paciente.id]" class="btn btn-primary">Editar</a>
+          <a [routerLink]="['/pacientes/excluir', paciente.id]" class="btn btn-danger">Excluir</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <a [routerLink]="['/pacientes/adicionar']" class="btn btn-success">Adicionar Paciente</a>
+</div>
+
+
+
+  
+  
+  

@@ -28,7 +28,7 @@ export class ExcluirPacienteComponent implements OnInit {
   }
 
   excluirPaciente(): void {
-    if (this.pacienteId !== undefined) {
+    if (this.pacienteId) {
       this.pacientesService.excluirPaciente(this.pacienteId).subscribe({
         next: () => {
           console.log('Paciente excluído com sucesso');
@@ -45,5 +45,7 @@ export class ExcluirPacienteComponent implements OnInit {
     this.router.navigate(['/pacientes']);
   }
 }
+
+
 
 

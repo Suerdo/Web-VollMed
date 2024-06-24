@@ -1,1 +1,30 @@
-<p>listar-medicos works!</p>
+<div class="container">
+    <h2>Lista de Médicos</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>CRM</th>
+          <th>Especialidade</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let medico of medicos">
+          <td>{{ medico.nome }}</td>
+          <td>{{ medico.email }}</td>
+          <td>{{ medico.crm }}</td>
+          <td>{{ medico.especialidade }}</td>
+          <td>
+            <a [routerLink]="['/medicos/editar', medico.id]" class="btn btn-primary">Editar</a>
+            <a [routerLink]="['/medicos/excluir', medico.id]" class="btn btn-danger">Excluir</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <a [routerLink]="['/medicos/adicionar']" class="btn btn-success">Adicionar Médico</a>
+  </div>
+  
+  
+  

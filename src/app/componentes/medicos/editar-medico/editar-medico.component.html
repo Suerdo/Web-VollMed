@@ -1,1 +1,50 @@
-<p>editar-medico works!</p>
+<div class="container">
+    <h2>Editar Médico</h2>
+    <form #editForm="ngForm" (ngSubmit)="onSubmit(editForm)">
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" [(ngModel)]="medico.nome" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" [(ngModel)]="medico.telefone" required class="form-control">
+      </div>
+      <fieldset ngModelGroup="endereco">
+        <legend>Endereço</legend>
+        <div class="form-group">
+          <label for="logradouro">Logradouro:</label>
+          <input type="text" id="logradouro" name="logradouro" [(ngModel)]="medico.endereco.logradouro" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="bairro">Bairro:</label>
+          <input type="text" id="bairro" name="bairro" [(ngModel)]="medico.endereco.bairro" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="cep">CEP:</label>
+          <input type="text" id="cep" name="cep" [(ngModel)]="medico.endereco.cep" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" name="cidade" [(ngModel)]="medico.endereco.cidade" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="uf">UF:</label>
+          <input type="text" id="uf" name="uf" [(ngModel)]="medico.endereco.uf" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="complemento">Complemento:</label>
+          <input type="text" id="complemento" name="complemento" [(ngModel)]="medico.endereco.complemento" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="numero">Número:</label>
+          <input type="text" id="numero" name="numero" [(ngModel)]="medico.endereco.numero" class="form-control">
+        </div>
+      </fieldset>
+      <button type="submit" class="btn btn-primary" [disabled]="editForm.invalid">Salvar</button>
+      <button type="button" class="btn btn-secondary" (click)="voltar()">Voltar</button>
+    </form>
+  </div>
+  
+  
+  
+  

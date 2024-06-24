@@ -1,1 +1,12 @@
-<p>excluir-medico works!</p>
+<div class="container">
+    <h2>Excluir Médico</h2>
+    <div *ngIf="medico">
+      <p>Tem certeza de que deseja excluir o médico <strong>{{ medico.nome }}</strong>?</p>
+      <button class="btn btn-danger" (click)="excluirMedico()">Excluir</button>
+      <button class="btn btn-secondary" (click)="voltar()">Voltar</button>
+    </div>
+    <div *ngIf="!medico">
+      <p>Carregando detalhes do médico...</p>
+    </div>
+  </div>
+  

@@ -1,24 +1,8 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  background-color: #f8f9fa; /* Cor de fundo */
-}
-
 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh; /* Garantir que o wrapper ocupe a altura total da viewport */
 }
 
 .container {

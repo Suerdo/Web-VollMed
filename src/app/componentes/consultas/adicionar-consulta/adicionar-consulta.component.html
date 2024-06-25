@@ -13,8 +13,10 @@
         <label for="data">Data:</label>
         <input type="datetime-local" id="data" name="data" [(ngModel)]="consulta.data" required class="form-control">
       </div>
-      <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Agendar</button>
-      <button type="button" class="btn btn-secondary" (click)="voltar()">Voltar</button>
+      <div class="btn-container">
+        <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Agendar</button>
+        <button type="button" class="btn btn-secondary" (click)="voltar()">Voltar</button>
+      </div>
     </form>
   </div>
   

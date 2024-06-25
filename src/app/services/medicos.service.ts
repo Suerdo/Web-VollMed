@@ -31,7 +31,7 @@ export class MedicosService {
   }
 
   private getHttpOptions() {
-    const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGxhaW5AZ21haWwuY29tIiwiaXNzIjoiQVBJIFZvbGwubWVkIiwiaWQiOjIsImV4cCI6MTcxOTI2Mjc5Nn0.8OjYWvZ3Izd9LscFr6SYeAjJ_H8TBfqXHsv0JBhr-9U'; 
+    const token = localStorage.getItem('token'); // Pegar token do localStorage
     return {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -40,4 +40,5 @@ export class MedicosService {
     };
   }
 }
+
 

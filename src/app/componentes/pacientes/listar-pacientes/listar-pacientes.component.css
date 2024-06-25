@@ -15,71 +15,6 @@ html, body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  color: #007bff;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-  font-size: 14px; /* Diminuir o tamanho da fonte */
-}
-
-.table th, .table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-.table th {
-  background-color: #007bff;
-  color: white;
-}
-
-.table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.btn {
-  display: inline-block;
-  padding: 8px 16px; /* Ajustar o padding dos botões */
-  border: none;
-  border-radius: 4px;
-  font-size: 14px; /* Diminuir o tamanho da fonte */
-  cursor: pointer;
-  text-align: center;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-  color: #fff;
-}
-
-.btn-secondary:hover {
-  background-color: #5a6268;
-}
-
-.btn-danger {
-  background-color: #dc3545;
-  color: #fff;
-}
-
-.btn-danger:hover {
-  background-color: #c82333;
-}
-
 .text-center {
   text-align: center;
 }
@@ -111,17 +46,25 @@ h2 {
   background-color: #ff9800;
 }
 
-/* Estilo específico para o botão de adicionar médico */
-.add-medico-btn {
-  background-color: #007bff;
+/* Estilo específico para o botão de adicionar paciente */
+.add-paciente-btn {
+  background-color: #08A6A6;
   color: #fff;
+  text-decoration: none;
 }
 
-.add-medico-btn:hover {
-  background-color: #0056b3;
+.add-paciente-btn:hover {
+  background-color: #047a7a;
+  text-decoration: underline;
 }
 
 .table td .btn {
   margin: 0 5px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
   

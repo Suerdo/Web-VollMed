@@ -1,0 +1,79 @@
+ .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  h2 {
+    color: #08A6A6;
+    font-size: xx-large;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-container .btn {
+    flex: 1 1 auto;
+  }
+
+  .btn-pacientes {
+    background-color: #08A6A6;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .btn-pacientes:hover {
+    background-color: #047a7a;
+    text-decoration: underline;
+  }
+
+  .btn-medicos {
+    background-color: #08A6A6;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .btn-medicos:hover {
+    background-color: #047a7a;
+    text-decoration: underline;
+  }
+
+  .btn-consultas {
+    background-color: #08A6A6;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .btn-consultas:hover {
+    background-color: #047a7a;
+    text-decoration: underline;
+  }
+  
+  .logout-btn {
+    margin-left: 20px;
+  }
+  
+  .link {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .link a:hover {
+    text-decoration: underline;
+  }

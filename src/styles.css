@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #12283F;
+}
+
+.img-container{
+    text-align: center;
+    max-width: 79px;
+    max-height: 79px;
+    width: auto;
+    height: auto;
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    display: block; /* Garante que as margens automáticas funcionem */
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px; /* Ajustar o padding dos botões */
+    border: none;
+    border-radius: 4px;
+    font-size: 14px; /* Diminuir o tamanho da fonte */
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+    text-decoration: underline;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    text-decoration: underline;
+  }
+
+  h2 {
+    color: #08A6A6;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 14px; /* Diminuir o tamanho da fonte */
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #08A6A6;
+    color: white;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }

@@ -13,22 +13,26 @@ import { ExcluirMedicoComponent } from './componentes/medicos/excluir-medico/exc
 import { ListarConsultasComponent } from './componentes/consultas/listar-consultas/listar-consultas.component';
 import { AdicionarConsultaComponent } from './componentes/consultas/adicionar-consulta/adicionar-consulta.component';
 import { ExcluirConsultaComponent } from './componentes/consultas/excluir-consulta/excluir-consulta.component';
+import { HomeComponent } from './componentes/home/home.component';
+import { AuthGuard } from './guards/auth.guard'; 
+
 
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'pacientes', component: ListarPacientesComponent },
-  { path: 'pacientes/adicionar', component: AdicionarPacienteComponent },
-  { path: 'pacientes/editar/:id', component: EditarPacienteComponent },
-  { path: 'pacientes/excluir/:id', component: ExcluirPacienteComponent },
-  { path: 'medicos', component: ListarMedicosComponent },
-  { path: 'medicos/adicionar', component: AdicionarMedicoComponent },
-  { path: 'medicos/editar/:id', component: EditarMedicoComponent },
-  { path: 'medicos/excluir/:id', component: ExcluirMedicoComponent },
-  { path: 'consultas', component: ListarConsultasComponent },
-  { path: 'consultas/adicionar', component: AdicionarConsultaComponent },
-  { path: 'consultas/excluir/:id', component: ExcluirConsultaComponent },
+  { path: 'pacientes', component: ListarPacientesComponent, canActivate: [AuthGuard] },
+  { path: 'pacientes/adicionar', component: AdicionarPacienteComponent, canActivate: [AuthGuard] },
+  { path: 'pacientes/editar/:id', component: EditarPacienteComponent, canActivate: [AuthGuard] },
+  { path: 'pacientes/excluir/:id', component: ExcluirPacienteComponent, canActivate: [AuthGuard] },
+  { path: 'medicos', component: ListarMedicosComponent, canActivate: [AuthGuard] },
+  { path: 'medicos/adicionar', component: AdicionarMedicoComponent, canActivate: [AuthGuard] },
+  { path: 'medicos/editar/:id', component: EditarMedicoComponent, canActivate: [AuthGuard] },
+  { path: 'medicos/excluir/:id', component: ExcluirMedicoComponent, canActivate: [AuthGuard] },
+  { path: 'consultas', component: ListarConsultasComponent, canActivate: [AuthGuard] },
+  { path: 'consultas/adicionar', component: AdicionarConsultaComponent, canActivate: [AuthGuard] },
+  { path: 'consultas/excluir/:id', component: ExcluirConsultaComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 

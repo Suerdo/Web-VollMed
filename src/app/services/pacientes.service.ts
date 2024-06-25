@@ -31,7 +31,7 @@ export class PacientesService {
   }
 
   private getHttpOptions() {
-    const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGxhaW5AZ21haWwuY29tIiwiaXNzIjoiQVBJIFZvbGwubWVkIiwiaWQiOjIsImV4cCI6MTcxOTMyMzUzMn0.8tUksnaSky--74VwzhAOZcIAAkCF6Bu-FFQgHDuYJ7Q'; 
+    const token = localStorage.getItem('token'); // Pegar token do localStorage
     return {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -40,6 +40,7 @@ export class PacientesService {
     };
   }
 }
+
 
 
 

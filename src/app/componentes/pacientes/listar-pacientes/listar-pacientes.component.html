@@ -22,7 +22,10 @@
       </tr>
     </tbody>
   </table>
-  <a [routerLink]="['/pacientes/adicionar']" class="btn btn-success">Adicionar Paciente</a>
+  <div class="btn-container">
+    <a [routerLink]="['/pacientes/adicionar']" class="btn add-paciente-btn">Adicionar Paciente</a>
+    <a [routerLink]="['/home']" class="btn btn-secondary">Home</a>
+  </div>
 </div>
 
 

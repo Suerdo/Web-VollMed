@@ -19,12 +19,11 @@ export class ConsultasService {
   }
 
   excluirConsulta(id: number): Observable<any> {
-    console.log('Chamando excluirConsulta com ID:', id);
     return this.http.delete(`${this.baseUrl}/${id}`, this.getHttpOptions());
   }
 
   private getHttpOptions() {
-    const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGxhaW5AZ21haWwuY29tIiwiaXNzIjoiQVBJIFZvbGwubWVkIiwiaWQiOjIsImV4cCI6MTcxOTMyMzUzMn0.8tUksnaSky--74VwzhAOZcIAAkCF6Bu-FFQgHDuYJ7Q'; 
+    const token = localStorage.getItem('token'); // Pegue o token dinamicamente do localStorage
     return {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -33,6 +32,7 @@ export class ConsultasService {
     };
   }
 }
+
 
 
 

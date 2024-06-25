@@ -1,26 +1,10 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* background-image: url('https://blog.imedicina.com.br/wp-content/uploads/2020/07/shutterstock_314744660-1.jpg');*/
-
-body {
-  width: 100%;
-  height: 100%;
-  background-color: #f8f9fa; /* Cor de fundo */
-}
 
 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh; /* Garantir que o wrapper ocupe a altura total da viewport */
+  height: 80vh; /* Garantir que o wrapper ocupe a altura total da viewport */
 }
 
 .container {
@@ -36,7 +20,7 @@ body {
 
 .clinic-name {
   text-align: center;
-  color: #004085; /* Azul mais escuro */
+  color: #12283F; /* Azul mais escuro */
   margin-bottom: 10px;
   font-size: 32px; /* Aumentando o tamanho da fonte */
   font-weight: bold;

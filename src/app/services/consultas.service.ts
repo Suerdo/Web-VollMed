@@ -5,28 +5,21 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class PacientesService {
-  private baseUrl = 'http://localhost:8080/pacientes';
+export class ConsultasService {
+  private baseUrl = 'http://localhost:8080/consultas';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getPacientes(): Observable<any> {
+  getConsultas(): Observable<any> {
     return this.http.get(`${this.baseUrl}`, this.getHttpOptions());
   }
 
-  getPaciente(id: number): Observable<any> {
-    return this.http.get(`${this.baseUrl}/${id}`, this.getHttpOptions());
+  agendarConsulta(consulta: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}`, consulta, this.getHttpOptions());
   }
 
-  adicionarPaciente(paciente: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}`, paciente, this.getHttpOptions());
-  }
-
-  atualizarPaciente(id: number, paciente: Object): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/${id}`, paciente, this.getHttpOptions());
-  }
-
-  excluirPaciente(id: number): Observable<any> {
+  excluirConsulta(id: number): Observable<any> {
+    console.log('Chamando excluirConsulta com ID:', id);
     return this.http.delete(`${this.baseUrl}/${id}`, this.getHttpOptions());
   }
 
@@ -40,8 +33,6 @@ export class PacientesService {
     };
   }
 }
-
-
 
 
 

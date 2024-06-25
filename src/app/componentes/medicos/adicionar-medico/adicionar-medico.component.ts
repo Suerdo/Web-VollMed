@@ -10,7 +10,8 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './adicionar-medico.component.html',
   styleUrls: ['./adicionar-medico.component.css'],
   standalone: true,
-  imports: [CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule],
+  
 })
 export class AdicionarMedicoComponent {
 

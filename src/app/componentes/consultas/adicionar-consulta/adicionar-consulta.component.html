@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Agendar Consulta</h2>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="form-group">
+        <label for="idMedico">Médico:</label>
+        <input type="number" id="idMedico" name="idMedico" [(ngModel)]="consulta.idMedico" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="idPaciente">Paciente:</label>
+        <input type="number" id="idPaciente" name="idPaciente" [(ngModel)]="consulta.idPaciente" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="data">Data:</label>
+        <input type="datetime-local" id="data" name="data" [(ngModel)]="consulta.data" required class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Agendar</button>
+      <button type="button" class="btn btn-secondary" (click)="voltar()">Voltar</button>
+    </form>
+  </div>
+  
+  
+  
+  
+  

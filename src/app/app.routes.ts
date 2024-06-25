@@ -10,6 +10,10 @@ import { ListarMedicosComponent } from './componentes/medicos/listar-medicos/lis
 import { AdicionarMedicoComponent } from './componentes/medicos/adicionar-medico/adicionar-medico.component';
 import { EditarMedicoComponent } from './componentes/medicos/editar-medico/editar-medico.component';
 import { ExcluirMedicoComponent } from './componentes/medicos/excluir-medico/excluir-medico.component';
+import { ListarConsultasComponent } from './componentes/consultas/listar-consultas/listar-consultas.component';
+import { AdicionarConsultaComponent } from './componentes/consultas/adicionar-consulta/adicionar-consulta.component';
+import { ExcluirConsultaComponent } from './componentes/consultas/excluir-consulta/excluir-consulta.component';
+
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -22,6 +26,9 @@ export const routes: Routes = [
   { path: 'medicos/adicionar', component: AdicionarMedicoComponent },
   { path: 'medicos/editar/:id', component: EditarMedicoComponent },
   { path: 'medicos/excluir/:id', component: ExcluirMedicoComponent },
+  { path: 'consultas', component: ListarConsultasComponent },
+  { path: 'consultas/adicionar', component: AdicionarConsultaComponent },
+  { path: 'consultas/excluir/:id', component: ExcluirConsultaComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
@@ -30,6 +37,11 @@ export const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+
+
+
+
+
 
 
 

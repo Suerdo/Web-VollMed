@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Listagem de Consultas</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Médico</th>
+        <th>Paciente</th>
+        <th>Data</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let consulta of consultas">
+        <td>{{ consulta.nomeMedico }}</td>
+        <td>{{ consulta.nomePaciente }}</td>
+        <td>{{ consulta.data | date: 'short' }}</td>
+        <td>
+          <a [routerLink]="['/consultas/excluir', consulta.id]" class="btn btn-danger">Excluir</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <a [routerLink]="['/consultas/adicionar']" class="btn btn-primary">Cadastrar Consulta</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

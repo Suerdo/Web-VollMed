@@ -3,6 +3,7 @@
   <table class="table">
     <thead>
       <tr>
+        <th>ID</th> 
         <th>Médico</th>
         <th>Paciente</th>
         <th>Data</th>
@@ -11,11 +12,12 @@
     </thead>
     <tbody>
       <tr *ngFor="let consulta of consultas">
+        <td>{{ consulta.idConsulta }}</td> 
         <td>{{ consulta.nomeMedico }}</td>
         <td>{{ consulta.nomePaciente }}</td>
         <td>{{ consulta.data | date: 'short' }}</td>
         <td>
-          <a [routerLink]="['/consultas/excluir', consulta.id]" class="btn btn-danger">Excluir</a>
+          <a [routerLink]="['/consultas/excluir', consulta.idConsulta]" class="btn btn-danger">Excluir</a> 
         </td>
       </tr>
     </tbody>
@@ -25,6 +27,7 @@
     <a [routerLink]="['/home']" class="btn btn-secondary">Home</a>
   </div>
 </div>
+
 
 
 

@@ -46,7 +46,6 @@ html, body {
   background-color: #ff9800;
 }
 
-/* Estilo específico para o botão de adicionar paciente */
 .add-paciente-btn {
   background-color: #08A6A6;
   color: #fff;
@@ -67,4 +66,5 @@ html, body {
   justify-content: space-between;
   margin-top: 20px;
 }
+
   

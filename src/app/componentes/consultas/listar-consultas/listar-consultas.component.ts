@@ -17,28 +17,17 @@ export class ListarConsultasComponent implements OnInit {
   constructor(private consultasService: ConsultasService) {}
 
   ngOnInit(): void {
-    this.consultasService.getConsultas().subscribe({
-      next: (data) => {
+    this.consultasService.getConsultas().subscribe(
+      data => {
         this.consultas = data.content;
       },
-      error: (error) => {
+      error => {
         console.error('Erro ao carregar consultas', error);
       }
-    });
+    );
   }
 
-  excluirConsulta(id: number): void {
-    if (confirm('Tem certeza de que deseja excluir esta consulta?')) {
-      this.consultasService.excluirConsulta(id).subscribe({
-        next: () => {
-          this.consultas = this.consultas.filter(consulta => consulta.id !== id);
-        },
-        error: (error) => {
-          console.error('Erro ao excluir consulta', error);
-        }
-      });
-    }
-  }
+
 }
 
 

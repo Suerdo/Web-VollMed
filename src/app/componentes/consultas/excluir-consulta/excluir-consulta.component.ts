@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, FormsModule]
 })
 export class ExcluirConsultaComponent implements OnInit {
-  consultaId: number | undefined;
+  consulta: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,26 +22,37 @@ export class ExcluirConsultaComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.consultaId = Number(id);
-      console.log('Consulta ID:', this.consultaId); // Adicione este log
+    console.log('ID da consulta na rota:', id);
+
+    if (id && !isNaN(Number(id))) {
+        this.consultasService.getConsultaPorId(Number(id)).subscribe({
+            next: (data) => {
+                this.consulta = data;
+                console.log('Consulta carregada:', this.consulta);
+            },
+            error: (error) => {
+                console.error('Erro ao carregar consulta', error);
+            }
+        });
     } else {
-      console.error('ID da consulta não encontrado na rota');
+        console.error('ID inválido:', id);
     }
   }
 
   excluirConsulta(): void {
-    console.log('Excluir consulta chamada com ID:', this.consultaId); // Adicione este log
-    if (this.consultaId) {
-      this.consultasService.excluirConsulta(this.consultaId).subscribe({
-        next: () => {
-          console.log('Consulta excluída com sucesso'); // Adicione este log
-          this.router.navigate(['/consultas']);
-        },
-        error: (error) => {
-          console.error('Erro ao excluir consulta', error);
-        }
-      });
+    if (this.consulta && this.consulta.id) {
+        console.log('ID da consulta para exclusão:', this.consulta.id);
+        this.consultasService.excluirConsulta(this.consulta.id).subscribe({
+            next: () => {
+                console.log('Consulta excluída com sucesso');
+                this.router.navigate(['/consultas']);
+            },
+            error: (error) => {
+                console.error('Erro ao excluir consulta', error);
+            }
+        });
+    } else {
+        console.error('ID da consulta não disponível para exclusão');
     }
   }
 
@@ -49,6 +60,9 @@ export class ExcluirConsultaComponent implements OnInit {
     this.router.navigate(['/consultas']);
   }
 }
+
+
+
 
 
 

@@ -10,6 +10,10 @@ export class ConsultasService {
 
   constructor(private http: HttpClient) {}
 
+  getConsultaPorId(id: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${id}`, this.getHttpOptions());
+  }
+  
   getConsultas(): Observable<any> {
     return this.http.get(`${this.baseUrl}`, this.getHttpOptions());
   }
@@ -23,7 +27,7 @@ export class ConsultasService {
   }
 
   private getHttpOptions() {
-    const token = localStorage.getItem('token'); // Pegue o token dinamicamente do localStorage
+    const token = localStorage.getItem('token');
     return {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',

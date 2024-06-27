@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { PacientesService } from '../../../services/pacientes.service';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common'; // Adicione esta linha
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-listar-pacientes',
   templateUrl: './listar-pacientes.component.html',
   styleUrls: ['./listar-pacientes.component.css'],
   standalone: true,
-  imports: [RouterModule, CommonModule] // Certifique-se de que o CommonModule está importado aqui
+  imports: [RouterModule, CommonModule] 
 })
 export class ListarPacientesComponent implements OnInit {
   pacientes: any[] = [];

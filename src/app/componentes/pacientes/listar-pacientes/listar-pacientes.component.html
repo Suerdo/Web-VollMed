@@ -1,9 +1,9 @@
-<!-- listar-pacientes.component.html -->
 <div class="container">
   <h2>Lista de Pacientes</h2>
   <table class="table">
     <thead>
       <tr>
+        <th>ID</th>
         <th>Nome</th>
         <th>Email</th>
         <th>Telefone</th>
@@ -12,6 +12,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let paciente of pacientes">
+        <td>{{ paciente.id }}</td>
         <td>{{ paciente.nome }}</td>
         <td>{{ paciente.email }}</td>
         <td>{{ paciente.telefone }}</td>
@@ -27,6 +28,7 @@
     <a [routerLink]="['/home']" class="btn btn-secondary">Home</a>
   </div>
 </div>
+
 
 
 
